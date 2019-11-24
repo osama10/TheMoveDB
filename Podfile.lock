@@ -1,0 +1,23 @@
+PODS:
+  - Alamofire (5.0.0-beta.5)
+  - OBNetworking (1.0):
+    - Alamofire (= 5.0.0-beta.5)
+
+DEPENDENCIES:
+  - OBNetworking (from `../OBNetworking`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  OBNetworking:
+    :path: "../OBNetworking"
+
+SPEC CHECKSUMS:
+  Alamofire: 9afb08f7f43efcc71c072374e720fcf67521317d
+  OBNetworking: 4012f73699398aa1ed2d84dee186add7bbdf9c18
+
+PODFILE CHECKSUM: 650e88a1f27612a12db9cf52ee4dcaf18d0b9d59
+
+COCOAPODS: 1.8.4
