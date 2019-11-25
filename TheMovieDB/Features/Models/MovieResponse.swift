@@ -12,7 +12,7 @@ struct MovieResponseModel: Decodable {
     let page: Int?
     let totalResults: Int?
     let totalPages: Int?
-    let movies: [Movie]?
+    let movies: [MovieDTO]?
 
     private enum CodingKeys: String, CodingKey {
         case page

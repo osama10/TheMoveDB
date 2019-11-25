@@ -17,9 +17,9 @@ class ViewController: UIViewController {
         let params = MovieRequestModel(page: 1, api_key: "2696829a81b1b5827d515ff121700838")
         let request = RequestBuilder(path: path, parameters: params)
 
-        networkManager.get(request: request) { (response: APIResponse<MovieResponseModel>) in
-            print(response)
-        }
+//        networkManager.get(request: request) { (response: APIResponse<MovieResponseModel>) in
+//            print(response)
+//        }
     }
 
 

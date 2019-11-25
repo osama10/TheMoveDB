@@ -17,7 +17,8 @@ class CoreDataManger {
         self.context = context
     }
 
-    func save(_ object : NSManagedObject ,  _ entity : String ) -> Bool {
+    @discardableResult
+    func save(entity : String ) -> Bool {
         var objectSaved = true
         if context.hasChanges {
             do {
@@ -45,6 +46,7 @@ class CoreDataManger {
         return data
     }
 
+    @discardableResult
     func deleteObjects(_ entity : String ,  predicate : Predicate? = nil) -> Bool {
         let data = self.fetchObject(entity, predicate: predicate)
         var result = false

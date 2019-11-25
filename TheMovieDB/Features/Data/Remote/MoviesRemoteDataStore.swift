@@ -9,23 +9,23 @@
 import Foundation
 import OBNetworking
 
-protocol MovieRemoteDataStoreDelegate {
+protocol MoviesRemoteDataStoreDelegate {
     func didFetchMovie(movies : MovieResponseModel)
     func didFailWithError(error: Error)
 }
 
-protocol MovieRemoteDataStoreProtocol {
-    var delegate: MovieRemoteDataStoreDelegate? { get set }
+protocol MoviesRemoteDataStoreProtocol {
+    var delegate: MoviesRemoteDataStoreDelegate? { get set }
     func getMovies(parameters: MovieRequestModel)
 }
 
-final class MovieRemoteDataStore: MovieRemoteDataStoreProtocol {
+final class MoviesRemoteDataStore: MoviesRemoteDataStoreProtocol {
 
-    var delegate: MovieRemoteDataStoreDelegate?
+    var delegate: MoviesRemoteDataStoreDelegate?
     private let networkManager: Networking
     private let endpoint = "movie/now_playing"
 
-    init(networkManager: Networking, delegate: MovieRemoteDataStoreDelegate? = nil) {
+    init(networkManager: Networking, delegate: MoviesRemoteDataStoreDelegate? = nil) {
         self.delegate = delegate
         self.networkManager = networkManager
     }
