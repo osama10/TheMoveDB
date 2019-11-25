@@ -18,6 +18,8 @@
 		03C19007238AF04800FC224C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C19006238AF04800FC224C /* Assets.xcassets */; };
 		03C1900A238AF04800FC224C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C19008238AF04800FC224C /* LaunchScreen.storyboard */; };
 		03C19015238AF04800FC224C /* TheMovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19014238AF04800FC224C /* TheMovieDBTests.swift */; };
+		03DB0082238C2A1400B5F46B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB0081238C2A1400B5F46B /* CoreDataManager.swift */; };
+		03DB0084238C2A5100B5F46B /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB0083238C2A5100B5F46B /* Predicate.swift */; };
 		6BC68F12B048670CDECE8B1E /* Pods_TheMovieDBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3BAD5135881B37D18224BA3 /* Pods_TheMovieDBTests.framework */; };
 		C1459907A43498A55199B804 /* Pods_TheMovieDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BDA82418D848FB12D040044 /* Pods_TheMovieDB.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		03C19010238AF04800FC224C /* TheMovieDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMovieDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C19014238AF04800FC224C /* TheMovieDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBTests.swift; sourceTree = "<group>"; };
 		03C19016238AF04800FC224C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03DB0081238C2A1400B5F46B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		03DB0083238C2A5100B5F46B /* Predicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Predicate.swift; sourceTree = "<group>"; };
 		0BDA82418D848FB12D040044 /* Pods_TheMovieDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheMovieDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F1E612708C119C6AAD8C62D /* Pods-TheMovieDBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDBTests.release.xcconfig"; path = "Target Support Files/Pods-TheMovieDBTests/Pods-TheMovieDBTests.release.xcconfig"; sourceTree = "<group>"; };
 		93397B50135E17C6726F5667 /* Pods-TheMovieDBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDBTests.debug.xcconfig"; path = "Target Support Files/Pods-TheMovieDBTests/Pods-TheMovieDBTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 		039BE66E238B2156009C0DAC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				03DB0080238C2A0400B5F46B /* LocalDBManager */,
 				03DB007F238B26E200B5F46B /* Controllers */,
 				03DB007E238B26CC00B5F46B /* Extensions */,
 				039BE675238B223C009C0DAC /* Constants */,
@@ -112,8 +117,9 @@
 		039BE66F238B2162009C0DAC /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				03DB0076238B255A00B5F46B /* Scenes */,
-				039BE672238B2199009C0DAC /* Services */,
+				03DB0076238B255A00B5F46B /* UI */,
+				039BE672238B2199009C0DAC /* Domain */,
+				03DB0085238C2BCD00B5F46B /* Data */,
 				039BE671238B2187009C0DAC /* Models */,
 			);
 			path = Features;
@@ -137,11 +143,11 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		039BE672238B2199009C0DAC /* Services */ = {
+		039BE672238B2199009C0DAC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Services;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		039BE675238B223C009C0DAC /* Constants */ = {
@@ -193,13 +199,13 @@
 			path = TheMovieDBTests;
 			sourceTree = "<group>";
 		};
-		03DB0076238B255A00B5F46B /* Scenes */ = {
+		03DB0076238B255A00B5F46B /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				03DB007A238B260000B5F46B /* MovieDetail */,
 				03DB0077238B256500B5F46B /* MovieListings */,
 			);
-			path = Scenes;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		03DB0077238B256500B5F46B /* MovieListings */ = {
@@ -270,6 +276,22 @@
 			children = (
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		03DB0080238C2A0400B5F46B /* LocalDBManager */ = {
+			isa = PBXGroup;
+			children = (
+				03DB0081238C2A1400B5F46B /* CoreDataManager.swift */,
+				03DB0083238C2A5100B5F46B /* Predicate.swift */,
+			);
+			path = LocalDBManager;
+			sourceTree = "<group>";
+		};
+		03DB0085238C2BCD00B5F46B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		42CDAC197C93428EE94221AC /* Frameworks */ = {
@@ -467,6 +489,8 @@
 				03C19005238AF04500FC224C /* TheMovieDB.xcdatamodeld in Sources */,
 				039BE674238B2239009C0DAC /* Constants.swift in Sources */,
 				039BE668238B1AE9009C0DAC /* MovieRequest.swift in Sources */,
+				03DB0082238C2A1400B5F46B /* CoreDataManager.swift in Sources */,
+				03DB0084238C2A5100B5F46B /* Predicate.swift in Sources */,
 				03C18FFD238AF04500FC224C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
