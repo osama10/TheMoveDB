@@ -53,7 +53,7 @@ final class MoviesLocalDataSource: MoviesLocalDataSourceProtocol {
 extension MoviesLocalDataSource {
 
     // MARK:- Internal Utility methods
-    
+
     private func delete(movie : MovieDTO) {
         let predicate = Predicate(format: "%k == %@", arguments: ["movieId", String(movie.id)])
         localDBManager.deleteObjects(entity, predicate: predicate )

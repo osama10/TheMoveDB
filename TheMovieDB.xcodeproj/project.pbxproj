@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		03049E0E238C660E00B209CC /* Movie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03049E0C238C660E00B209CC /* Movie+CoreDataClass.swift */; };
 		03049E0F238C660E00B209CC /* Movie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03049E0D238C660E00B209CC /* Movie+CoreDataProperties.swift */; };
+		03049E14238D091400B209CC /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03049E13238D091400B209CC /* MoviesRepository.swift */; };
+		03049E18238D0D9400B209CC /* MoviesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03049E17238D0D9400B209CC /* MoviesService.swift */; };
 		039BE668238B1AE9009C0DAC /* MovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039BE667238B1AE9009C0DAC /* MovieRequest.swift */; };
 		039BE66A238B1AF9009C0DAC /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039BE669238B1AF9009C0DAC /* MovieResponse.swift */; };
 		039BE66C238B1B19009C0DAC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039BE66B238B1B19009C0DAC /* Movie.swift */; };
@@ -55,6 +57,8 @@
 		01C041E813683484CB752588 /* Pods-TheMovieDB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieDB.debug.xcconfig"; path = "Target Support Files/Pods-TheMovieDB/Pods-TheMovieDB.debug.xcconfig"; sourceTree = "<group>"; };
 		03049E0C238C660E00B209CC /* Movie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataClass.swift"; sourceTree = "<group>"; };
 		03049E0D238C660E00B209CC /* Movie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Movie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		03049E13238D091400B209CC /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
+		03049E17238D0D9400B209CC /* MoviesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesService.swift; sourceTree = "<group>"; };
 		039BE667238B1AE9009C0DAC /* MovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequest.swift; sourceTree = "<group>"; };
 		039BE669238B1AF9009C0DAC /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		039BE66B238B1B19009C0DAC /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -110,6 +114,39 @@
 			path = Movie;
 			sourceTree = "<group>";
 		};
+		03049E11238D08DB00B209CC /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				03DB0089238C5C1A00B5F46B /* Local */,
+				03DB0088238C5C1000B5F46B /* Remote */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		03049E12238D08F000B209CC /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				03049E13238D091400B209CC /* MoviesRepository.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		03049E15238D0D1D00B209CC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				03049E16238D0D6C00B209CC /* Movies */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		03049E16238D0D6C00B209CC /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				03049E17238D0D9400B209CC /* MoviesService.swift */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
 		039BE66D238B213F009C0DAC /* AppStartup */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				03DB0076238B255A00B5F46B /* UI */,
+				03049E15238D0D1D00B209CC /* Services */,
 				039BE672238B2199009C0DAC /* Domain */,
 				03DB0085238C2BCD00B5F46B /* Data */,
 				039BE671238B2187009C0DAC /* Models */,
@@ -163,6 +201,7 @@
 		039BE672238B2199009C0DAC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				03049E12238D08F000B209CC /* Movies */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -307,8 +346,7 @@
 		03DB0085238C2BCD00B5F46B /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				03DB0089238C5C1A00B5F46B /* Local */,
-				03DB0088238C5C1000B5F46B /* Remote */,
+				03049E11238D08DB00B209CC /* Movies */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -535,6 +573,8 @@
 				03C19005238AF04500FC224C /* TheMovieDB.xcdatamodeld in Sources */,
 				039BE674238B2239009C0DAC /* Constants.swift in Sources */,
 				039BE668238B1AE9009C0DAC /* MovieRequest.swift in Sources */,
+				03049E14238D091400B209CC /* MoviesRepository.swift in Sources */,
+				03049E18238D0D9400B209CC /* MoviesService.swift in Sources */,
 				03DB0087238C556600B5F46B /* MoviesRemoteDataStore.swift in Sources */,
 				03DB0082238C2A1400B5F46B /* CoreDataManager.swift in Sources */,
 				03DB0084238C2A5100B5F46B /* Predicate.swift in Sources */,
