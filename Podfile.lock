@@ -1,14 +1,24 @@
 PODS:
   - Alamofire (5.0.0-beta.5)
+  - NVActivityIndicatorView (4.8.0):
+    - NVActivityIndicatorView/Presenter (= 4.8.0)
+  - NVActivityIndicatorView/Presenter (4.8.0)
   - OBNetworking (1.0):
     - Alamofire (= 5.0.0-beta.5)
+  - SDWebImage (4.4.7):
+    - SDWebImage/Core (= 4.4.7)
+  - SDWebImage/Core (4.4.7)
 
 DEPENDENCIES:
+  - NVActivityIndicatorView
   - OBNetworking (from `../OBNetworking`)
+  - SDWebImage (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - NVActivityIndicatorView
+    - SDWebImage
 
 EXTERNAL SOURCES:
   OBNetworking:
@@ -16,8 +26,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 9afb08f7f43efcc71c072374e720fcf67521317d
+  NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   OBNetworking: 4012f73699398aa1ed2d84dee186add7bbdf9c18
+  SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
 
-PODFILE CHECKSUM: 4a43e48239fac24a34f92b04f3559ac495b670cb
+PODFILE CHECKSUM: a006b55ac945571fbbd179c68f6f5c7fa8029c7d
 
 COCOAPODS: 1.8.4

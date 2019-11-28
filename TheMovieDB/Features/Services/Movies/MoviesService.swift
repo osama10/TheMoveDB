@@ -29,7 +29,7 @@ final class  MoviesService: MoviesServiceProtocol {
     }
 
     func getMovies() {
-        (canFetchMovies()) ? fetchMovies(page: movieResponse?.page ?? 1, apiKey: Constants.Keys.api) : cantFetchMovies()
+        (canFetchMovies()) ? fetchMovies(page: (movieResponse?.page ?? 0) + 1, apiKey: Constants.Keys.api) : cantFetchMovies()
     }
 
     private func canFetchMovies() -> Bool {

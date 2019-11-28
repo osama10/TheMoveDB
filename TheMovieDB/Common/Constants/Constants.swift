@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
 
@@ -16,14 +17,6 @@ struct Constants {
 
     struct API {
         static let baseURL  = "http://api.themoviedb.org/3/"
-
-        enum ImageSize: Int {
-            case thumb = 92
-            case large = 500
-        }
-
-        static func imageBaseURL(imageSize: ImageSize = .thumb) -> String {
-            return "http://image.tmdb.org/t/p/w\(imageSize.rawValue)"
-        }
+        static let imageBaseURL = "http://image.tmdb.org/t/p/w500"
     }
 }

@@ -25,7 +25,7 @@ final class MoviesRemoteDataStore: MoviesRemoteDataStoreProtocol {
     private let networkManager: Networking
     private let endpoint = "movie/now_playing"
 
-    init(networkManager: Networking, delegate: MoviesRemoteDataStoreDelegate? = nil) {
+    init(networkManager: Networking = NetworkManager(), delegate: MoviesRemoteDataStoreDelegate? = nil) {
         self.delegate = delegate
         self.networkManager = networkManager
     }
