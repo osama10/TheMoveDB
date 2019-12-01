@@ -45,7 +45,7 @@ extension MovieDetailViewController: MovieDetailViewModelDelegate {
     func fillUI(with data: MovieDetailData) {
         titleLabel.text = data.title
         releaseDateLabel.text = data.releaseData
-        adultContentLabel.isHidden = data.showAdultLabel
+        adultContentLabel.isHidden = !data.showAdultLabel
         overviewLabel.text = data.overview
         rating.text = data.rating
         movieImageView.sd_setImage(with: data.imageURL, placeholderImage: UIImage(named: data.placeholderImage), completed: nil)

@@ -45,7 +45,7 @@ final class MovieDetailViewModel: MovieDetailViewModelProtocol {
     private func prepareDataToSend(movie: MovieDTO) -> MovieDetailData {
         let title =  movie.originalTitle ?? (movie.title ?? "Title not found")
         let releaseDate = (movie.releaseDate != nil) ? "Release Date : \(movie.releaseDate!)" : ""
-        let isAdult =  !((movie.adult ?? false))
+        let isAdult =  ((movie.adult ?? false))
         let overview = movie.overview ?? ""
         let rating = (movie.voteAverage != nil) ? "Rating : \(movie.voteAverage!)/10" : ""
         let url = URL(string: Constants.API.imageBaseURL + "\(movie.posterPath ?? "")")
