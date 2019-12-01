@@ -32,7 +32,7 @@ final class MoviesRepository: MoviesRepositoryProtocol {
     func getMovies(parameters: MovieRequestModel) {
         remoteMoviesDataSource.getMovies(parameters: parameters)
     }
-
+    
 }
 
 extension MoviesRepository: MoviesRemoteDataStoreDelegate {

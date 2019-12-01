@@ -16,4 +16,6 @@ final class Stubs {
 
     static let responseModelWithPagination = MovieResponseModel(page: 1, totalResults: 2, totalPages: 2, movies: [Stubs.movieWithNoData])
     static let responseModelWithoutPagination = MovieResponseModel(page: 1, totalResults: 1, totalPages: 1, movies: [Stubs.movieWithNoData])
+
+    static let movieRequest = MovieRequestModel(page: 1, api_key: "")
 }
