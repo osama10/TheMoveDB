@@ -29,8 +29,6 @@ protocol MovieDetailViewModelProtocol {
 
 final class MovieDetailViewModel: MovieDetailViewModelProtocol {
 
-
-
     private let movie: MovieDTO
     weak var delegate: MovieDetailViewModelDelegate?
 

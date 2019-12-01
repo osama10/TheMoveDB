@@ -39,7 +39,7 @@ public extension Notification.Name {
     static let reachabilityChanged = Notification.Name("reachabilityChanged")
 }
 
-public class Reachability {
+final public class Reachability {
 
     public typealias NetworkReachable = (Reachability) -> ()
     public typealias NetworkUnreachable = (Reachability) -> ()

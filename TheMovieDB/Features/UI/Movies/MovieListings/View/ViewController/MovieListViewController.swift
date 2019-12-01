@@ -11,7 +11,7 @@ import NVActivityIndicatorView
 
 class MovieListViewController: BaseViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     var viewModel: MoviesListViewModelProtocol!
 
     override func viewDidLoad() {

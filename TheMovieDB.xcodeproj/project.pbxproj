@@ -47,7 +47,6 @@
 		03C19005238AF04500FC224C /* TheMovieDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03C19003238AF04500FC224C /* TheMovieDB.xcdatamodeld */; };
 		03C19007238AF04800FC224C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C19006238AF04800FC224C /* Assets.xcassets */; };
 		03C1900A238AF04800FC224C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C19008238AF04800FC224C /* LaunchScreen.storyboard */; };
-		03C19015238AF04800FC224C /* TheMovieDBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C19014238AF04800FC224C /* TheMovieDBTests.swift */; };
 		03C1D808239070C20049FEDB /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1D807239070C20049FEDB /* AppNavigationController.swift */; };
 		03C1D80A239071680049FEDB /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C1D809239071680049FEDB /* UIFont+Extension.swift */; };
 		03C86348238D308000B99D6E /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C86347238D308000B99D6E /* MoviesListViewModel.swift */; };
@@ -134,7 +133,6 @@
 		03C19009238AF04800FC224C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03C1900B238AF04800FC224C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C19010238AF04800FC224C /* TheMovieDBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMovieDBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C19014238AF04800FC224C /* TheMovieDBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDBTests.swift; sourceTree = "<group>"; };
 		03C19016238AF04800FC224C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C1D807239070C20049FEDB /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		03C1D809239071680049FEDB /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -558,7 +556,6 @@
 			children = (
 				0380B7CE2394014E00FD7680 /* UnitTests */,
 				0380B7BF2393D57F00FD7680 /* UITests */,
-				03C19014238AF04800FC224C /* TheMovieDBTests.swift */,
 				03C19016238AF04800FC224C /* Info.plist */,
 			);
 			path = TheMovieDBTests;
@@ -976,7 +973,6 @@
 				0380B7CD2393EBB400FD7680 /* MockMovieListViewModel.swift in Sources */,
 				0380B7EE239426BE00FD7680 /* MockMovieServicesDelegate.swift in Sources */,
 				0380B7E723941CF500FD7680 /* MockMovieListVIewModelDelegate.swift in Sources */,
-				03C19015238AF04800FC224C /* TheMovieDBTests.swift in Sources */,
 				0380B7DC23940ED900FD7680 /* MockMovieServices.swift in Sources */,
 				0380B7CB2393E75D00FD7680 /* MovieListsSnapshotTests.swift in Sources */,
 				0380B7C42393D5BA00FD7680 /* MovieDetailsSnapShotTests.swift in Sources */,

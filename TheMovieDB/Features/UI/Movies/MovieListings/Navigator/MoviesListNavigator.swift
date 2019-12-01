@@ -12,8 +12,7 @@ protocol MoviesListNavigatorProtocol {
     func navigateToDetail(with movie: MovieDTO)
 }
 
-
-class MoviesListNavigator: MoviesListNavigatorProtocol {
+final class MoviesListNavigator: MoviesListNavigatorProtocol {
     private weak var navigationController: UINavigationController?
 
     init(navigationController: UINavigationController) {

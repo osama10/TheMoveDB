@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+
 struct DefaultAPIRequest: APIRequest {
     let request: DataRequest
     func cancel() {
@@ -14,7 +15,7 @@ struct DefaultAPIRequest: APIRequest {
     }
 }
 
-class NetworkManager: Networking {
+final class NetworkManager: Networking {
 
     public init() { }
 
