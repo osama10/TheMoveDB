@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import OBNetworking
 
 protocol MoviesRemoteDataStoreDelegate: class {
     func didFetchMovie(movies : MovieResponseModel)

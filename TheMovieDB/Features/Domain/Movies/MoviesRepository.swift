@@ -41,8 +41,8 @@ extension MoviesRepository: MoviesRemoteDataStoreDelegate {
     func didFetchMovie(movies: MovieResponseModel) {
         delegate?.didFetchMovie(movies: movies)
         guard let moviesData = movies.movies else { return }
-//        localMoviesDataSource.deleteAllMovies()
-//        localMoviesDataSource.saveMovies(movies: moviesData)
+        localMoviesDataSource.deleteAllMovies()
+        localMoviesDataSource.saveMovies(movies: moviesData)
     }
 
     func didFailWithError(error: Error) {

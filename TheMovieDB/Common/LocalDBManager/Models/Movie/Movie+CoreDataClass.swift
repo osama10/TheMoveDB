@@ -20,13 +20,13 @@ public class Movie: NSManagedObject {
     }
 
     init(context : NSManagedObjectContext ) {
-        let entityDesc = NSEntityDescription.entity(forEntityName: "DeliveryModel", in: context)
+        let entityDesc = NSEntityDescription.entity(forEntityName: "Movie", in: context)
         super.init(entity: entityDesc!, insertInto: context)
     }
 
     init(movieDTO : MovieDTO , context : NSManagedObjectContext){
 
-        let entityDesc = NSEntityDescription.entity(forEntityName: "DeliveryModel", in: context)
+        let entityDesc = NSEntityDescription.entity(forEntityName: "Movie", in: context)
         super.init(entity: entityDesc!, insertInto: context)
 
         self.movieId = Int64(movieDTO.id)

@@ -21,7 +21,7 @@ final class MoviesLocalDataSource: MoviesLocalDataSourceProtocol {
     let localDBManager: CoreDataManger
     let entity = "Movie"
 
-    init(localDBManager: CoreDataManger = CoreDataManger()) {
+    init(localDBManager: CoreDataManger) {
         self.localDBManager = localDBManager
     }
 

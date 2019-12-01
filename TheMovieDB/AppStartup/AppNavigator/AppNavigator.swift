@@ -19,10 +19,11 @@ struct AppNavigator { //: AppNavigatorProtocol {
         let storyboard = UIStoryboard(storyboard: .movies)
         let movieListController: MovieListViewController = storyboard.initialViewController()
         let rootController = AppNavigationController(rootViewController: movieListController)
-
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let coreDataManager = CoreDataManger(context: context)
         //View Model create & setup
         let remoteDataSource = MoviesRemoteDataStore()
-        let localDataSource = MoviesLocalDataSource()
+        let localDataSource = MoviesLocalDataSource(localDBManager: coreDataManager)
         let repository = MoviesRepository(remoteMoviesDataSource: remoteDataSource, localMoviesDataSource: localDataSource)
         let service = MoviesService(moviesRepository: repository)
         let navigator = MoviesListNavigator(navigationController: rootController)

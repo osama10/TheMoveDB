@@ -10,6 +10,7 @@ import Foundation
 
 protocol MoviesServiceDelegate: class {
     func didFetchMovies(movies: [MovieDTO])
+    func didFailWithError(movies: [MovieDTO], error: Error)
     func cantFetchMovie()
 }
 
@@ -56,7 +57,7 @@ extension MoviesService: MoviesRepositoryDelegate {
     }
 
     func didFailWithError(movies: [MovieDTO], error: Error) {
-        delegate?.didFetchMovies(movies: movies)
+        delegate?.didFailWithError(movies: movies, error: error)
     }
 
 }

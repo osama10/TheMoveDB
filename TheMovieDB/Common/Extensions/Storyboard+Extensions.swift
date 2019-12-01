@@ -28,4 +28,13 @@ extension UIStoryboard {
 
         return viewController
     }
+
+    func instantiateViewController<T: UIViewController>() -> T {
+        let identifier = String(describing: T.self).components(separatedBy: ".").last!
+        guard  let viewController = instantiateViewController(withIdentifier: identifier) as? T else {
+            fatalError("Couldn't instantiate view controller with identifier \(identifier) ")
+        }
+
+        return viewController
+    }
 }

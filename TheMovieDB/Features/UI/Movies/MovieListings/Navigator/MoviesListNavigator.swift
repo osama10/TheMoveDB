@@ -21,16 +21,14 @@ class MoviesListNavigator: MoviesListNavigatorProtocol {
     }
 
     func navigateToDetail(with movie: MovieDTO) {
-        print(movie)
         // controller create & setup
-//        let storyboard = UIStoryboard(storyboard: .movieDetail)
-//        let movieDetailController: MovieDetailViewController = storyboard.initialViewController()
-//
-//        //View Model create & setup
-//        movieDetailController.viewModel = MovieDetailViewModel(movie: movie)
-//
-//
-//        navigationController?.pushViewController(movieDetailController, animated: true)
+        let storyboard = UIStoryboard(storyboard: .movies)
+        let movieDetailController: MovieDetailViewController = storyboard.instantiateViewController()
+        //View Model create & setup
+        let viewModel = MovieDetailViewModel(movie: movie)
+        movieDetailController.viewModel = viewModel
+        viewModel.delegate = movieDetailController
+        navigationController?.pushViewController(movieDetailController, animated: true)
     }
 
 }

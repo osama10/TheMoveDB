@@ -13,7 +13,7 @@ class CoreDataManger {
 
     let context : NSManagedObjectContext
 
-    init(context : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)) {
+    init(context : NSManagedObjectContext) {
         self.context = context
     }
 

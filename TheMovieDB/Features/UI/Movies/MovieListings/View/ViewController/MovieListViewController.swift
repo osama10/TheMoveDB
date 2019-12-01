@@ -8,10 +8,10 @@
 
 import UIKit
 import NVActivityIndicatorView
-class MovieListViewController: UIViewController, NVActivityIndicatorViewable {
+
+class MovieListViewController: BaseViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-
     var viewModel: MoviesListViewModelProtocol!
 
     override func viewDidLoad() {
@@ -44,6 +44,9 @@ extension MovieListViewController: MoviesListViewModelDelegate {
         collectionView.reloadData()
     }
 
+    func alert(with title: String, message: String) {
+        showAlert(with: title, and: message)
+    }
 }
 
 extension MovieListViewController: UICollectionViewDelegate, UICollectionViewDataSource {

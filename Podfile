@@ -3,7 +3,7 @@ platform :ios, '10.0'
 target 'TheMovieDB' do
   use_frameworks!
 
-  pod 'OBNetworking', :path => '../OBNetworking'
+  pod 'Alamofire', '5.0.0-beta.5'
   pod 'SDWebImage', '~> 4.0'
   pod 'NVActivityIndicatorView'
 
