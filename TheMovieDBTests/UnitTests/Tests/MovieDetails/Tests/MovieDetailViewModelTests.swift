@@ -13,7 +13,7 @@ class MovieDetailViewModelTests: XCTestCase {
     var viewModel: MovieDetailViewModelProtocol!
 
     func test_whenViewDidLoadIsCalled_ThenFillUIMethodWillBeCalledOnDelgate() {
-        let movie = MovieDTO(id: 1, title: "Serlock", voteAverage: 10, posterPath: "", originalTitle: "Serlock", adult: false, overview: "Detective", releaseDate: "11-11-2019")
+        let movie = Stubs.movieWithData
         let delegate = MockMovieDetailViewModelDelegate()
         viewModel = MovieDetailViewModel(movie: movie)
         viewModel.delegate = delegate

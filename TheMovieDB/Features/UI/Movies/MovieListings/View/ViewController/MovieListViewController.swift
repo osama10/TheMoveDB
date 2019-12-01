@@ -16,10 +16,14 @@ class MovieListViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         setCollectionView()
+        viewModel.viewDidLoad()
+    }
+
+    private func setupView() {
         self.view.backgroundColor = .black
         self.title = viewModel.title
-        viewModel.viewDidLoad()
     }
 
     private func setCollectionView() {

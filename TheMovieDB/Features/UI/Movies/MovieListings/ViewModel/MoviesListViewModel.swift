@@ -93,12 +93,12 @@ extension MoviesListViewModel: MoviesServiceDelegate {
         localMovies = movies
         delegate?.stopLoader()
 
-        if (localMovies.count == 0 && self.remoteMovies.count == 0) {
+        if (localMovies.count == 0 && remoteMovies.count == 0) {
             delegate?.alert(with: "Nothing Found", message: "We couldn't found any movies, please try later")
             return
         }
 
-        if (movies.count == 0) {
+        if (localMovies.count > 0) {
             delegate?.reloadData()
             fetchedFromLocalStorage = true
             return
