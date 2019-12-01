@@ -11,11 +11,14 @@ import Foundation
 
 final class MockMovieListViewModel: MoviesListViewModelProtocol {
     var delegate: MoviesListViewModelDelegate?
-    var numberOfRows: Int = 0
-    var sections: Int = 0
+    var numberOfRows: Int {
+        return movieListCellViewModel.count
+    }
+    var sections: Int = 1
     var title: String = "TheMovieDB"
     var isLast: Bool = false
     private let movieListCellViewModel: [MovieListCellViewModel]
+
     init(movieListCellViewModel: [MovieListCellViewModel]) {
         self.movieListCellViewModel = movieListCellViewModel
     }
