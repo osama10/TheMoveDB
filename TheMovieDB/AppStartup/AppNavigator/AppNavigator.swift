@@ -8,11 +8,7 @@
 
 import UIKit
 
-protocol AppNavigatorProtocol {
-    func installRoot(in window: UIWindow)
-}
-
-struct AppNavigator { //: AppNavigatorProtocol {
+struct AppNavigator {
 
     func installRoot(into window: UIWindow) {
         // controller create & setup

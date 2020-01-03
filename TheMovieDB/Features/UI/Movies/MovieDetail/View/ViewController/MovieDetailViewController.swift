@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Sentry
 
 class MovieDetailViewController: BaseViewController {
 
@@ -42,6 +43,7 @@ class MovieDetailViewController: BaseViewController {
 
 extension MovieDetailViewController: MovieDetailViewModelDelegate {
 
+    // MARK:- MovieDetailViewModelDelegate
     func fillUI(with data: MovieDetailData) {
         titleLabel.text = data.title
         releaseDateLabel.text = data.releaseData

@@ -11,12 +11,16 @@ PODS:
   - SDWebImage (4.4.7):
     - SDWebImage/Core (= 4.4.7)
   - SDWebImage/Core (4.4.7)
+  - Sentry (4.4.1):
+    - Sentry/Core (= 4.4.1)
+  - Sentry/Core (4.4.1)
 
 DEPENDENCIES:
   - Alamofire (= 5.0.0-beta.5)
   - iOSSnapshotTestCase
   - NVActivityIndicatorView
   - SDWebImage (~> 4.0)
+  - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `4.4.1`)
 
 SPEC REPOS:
   trunk:
@@ -25,12 +29,23 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - SDWebImage
 
+EXTERNAL SOURCES:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 4.4.1
+
+CHECKOUT OPTIONS:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 4.4.1
+
 SPEC CHECKSUMS:
   Alamofire: 9afb08f7f43efcc71c072374e720fcf67521317d
   iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
+  Sentry: 5d312a04e369154aeac616214f4dfc3cbcc8b296
 
-PODFILE CHECKSUM: 479b46aaf5ead117a157237fc4f5a27d379599be
+PODFILE CHECKSUM: a94219bcfabe438d702bd81b61a00e2a4c7f182a
 
 COCOAPODS: 1.8.4

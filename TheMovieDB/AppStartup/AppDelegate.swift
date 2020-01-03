@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Sentry
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,10 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        configureSentry()
         window = UIWindow(frame: UIScreen.main.bounds)
         navigator.installRoot(into: window!)
         window?.makeKeyAndVisible()
         return true
+    }
+
+    private func configureSentry() {
+        do {
+            Client.shared = try Client(dsn: "https://21a0e1708b9c48e88ac9ad881f3def85@sentry.io/1870424")
+            try Client.shared?.startCrashHandler()
+        } catch let error {
+            print("\(error)")
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
